@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 //Struct
+
 struct Nilai {
     string matkul;
     float nilai;
@@ -17,7 +18,7 @@ struct Mahasiswa {
     Nilai* firstNilai;
 };
 
-// Inti
+// Core
 void init(Mahasiswa*& head);
 Mahasiswa* cariMahasiswa(Mahasiswa* head, const string& nim);
 void hapusMahasiswa(Mahasiswa*& head, const string& nim);
@@ -26,14 +27,15 @@ void clearAll(Mahasiswa*& head);
 // Mahasiswa
 void tambahMahasiswa(Mahasiswa*& head);
 
-// Nilai
+//Nilai
 void inputNilai(Mahasiswa* mhs);
+void updateNilai(Mahasiswa* mhs);
 
 // Tampil
 void tampilNilaiMahasiswa(const Mahasiswa* mhs);
 void tampilPesertaMatkul(const Mahasiswa* head, const string& matkul);
 
-// Util
+//Util
 bool cekLulus(float nilai);
 
 #endif
