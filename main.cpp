@@ -13,9 +13,10 @@ int main() {
         cout << "\n===== SISTEM NILAI MAHASISWA =====\n";
         cout << "1. Tambah Mahasiswa\n";
         cout << "2. Input Nilai\n";
-        cout << "3. Tampilkan Nilai Mahasiswa\n";
-        cout << "4. Tampilkan Peserta Mata Kuliah\n";
-        cout << "5. Hapus Mahasiswa\n";
+        cout << "3. Update Nilai\n";
+        cout << "4. Tampilkan Nilai Mahasiswa\n";
+        cout << "5. Tampilkan Peserta Mata Kuliah\n";
+        cout << "6. Hapus Mahasiswa\n";
         cout << "0. Keluar\n";
         cout << "Pilih: ";
 
@@ -38,14 +39,18 @@ int main() {
             break;
         case 3:
             cout << "NIM: "; getline(cin, nim);
-            tampilNilaiMahasiswa(cariMahasiswa(head, nim));
+            updateNilai(cariMahasiswa(head, nim));
             break;
         case 4:
+            cout << "NIM: "; getline(cin, nim);
+            tampilNilaiMahasiswa(cariMahasiswa(head, nim));
+            break;
+        case 5:
             cout << "Nama Mata Kuliah: ";
             getline(cin, matkul);
             tampilPesertaMatkul(head, matkul);
             break;
-        case 5:
+        case 6:
             cout << "NIM: "; getline(cin, nim);
             hapusMahasiswa(head, nim);
             break;
